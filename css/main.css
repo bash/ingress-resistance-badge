@@ -1,0 +1,109 @@
+html {
+height: 100%;
+}
+
+body {
+background:#1A1A1A;
+color: white;
+height: 100%;
+}
+
+* {
+font-family: 'Coda', cursive;
+}
+
+a {
+color: #59fbea;
+}
+
+h1, h2, h3, h4, h5, h6 {
+color: #cca844;
+}
+
+input {
+border: 1px solid #59fbea;
+padding: 5px;
+background: none;
+color: white;
+font-size: 15px;
+margin: 3px;
+}
+
+* {
+padding: 0;
+margin: 0;
+}
+
+body {
+padding: 10px;
+height: calc(100% - 20px);
+}
+
+input[type="button"], .button {
+background-color: rgb(0, 79, 74);
+color: #59fbea;
+padding: 1px 15px;
+border: 1px solid #59fbea;
+text-decoration: none;
+white-space: nowrap;
+margin: 3px 0px 3px 0px;
+display: inline-block;
+font-size: 15px;
+cursor: pointer;
+}
+
+#left {
+float:left;
+width: auto;
+padding-right: 20px;
+}
+
+#right {
+width: auto;
+float: left;
+text-align: left;
+}
+
+.nickname {
+color: #00c2ff;
+}
+
+#badge {
+	width: 300px;
+}
+
+
+@media(max-device-width: 600px), (max-width: 600px) {
+	#right, #left {
+	float: none;
+	display: block;
+	margin: auto;
+	text-align: center;
+	margin-top: 20px;
+	}
+}
+
+@media print {
+	body {
+		background: none;
+	}
+	
+	#left {
+	display: none;
+	}
+	
+	#right {
+	float: none;
+	margin: auto;
+	text-align: center;
+	height: 100%;
+	margin: auto;
+	display: block;
+	}
+	
+	#badge {
+	height: 100%;
+	}
+}
+
+
