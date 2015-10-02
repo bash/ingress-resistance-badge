@@ -1,0 +1,24 @@
+{
+  "name": "ingress-resistance-badge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bash/ingress-resistance-badge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bash/ingress-resistance-badge/issues"
+  },
+  "homepage": "https://github.com/bash/ingress-resistance-badge",
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1"
+  }
+}
