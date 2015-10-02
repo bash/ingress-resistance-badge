@@ -45,6 +45,22 @@ export class Renderer {
 
     /**
      *
+     * @param {HTMLAnchorElement} $elem
+     */
+    set $link($elem) {
+        this._$link = $elem;
+    }
+
+    /**
+     *
+     * @returns {HTMLAnchorElement}
+     */
+    get $link() {
+        return this._$link;
+    }
+
+    /**
+     *
      * @param {Model} model
      */
     render(model) {
@@ -71,5 +87,7 @@ export class Renderer {
         ctx.fillStyle = '#595959';
         ctx.fillText(model.country, 350, 489);
         ctx.closePath();
+
+        this.$link.href = this.$canvas.toDataURL('image/png');
     }
 }
