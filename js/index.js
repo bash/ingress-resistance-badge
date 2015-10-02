@@ -105,9 +105,11 @@ var Model = (function () {
     }, {
         key: 'callListeners',
         value: function callListeners() {
+            var _this = this;
+
             this._listeners.forEach(function (fn) {
-                fn(this);
-            }, this);
+                return fn(_this);
+            });
         }
 
         /**
