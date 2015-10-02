@@ -25,14 +25,20 @@ model.addListener(function (model) {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    var $canvas = document.querySelector('#badge');
+    var $canvas = document.querySelector('#badge'),
+        $link = document.querySelector('#download');
 
     (0, _utilsBindInput.bindInput)('#agent', model, 'agent');
     (0, _utilsBindInput.bindInput)('#level', model, 'level');
     (0, _utilsBindInput.bindInput)('#country', model, 'country');
 
     renderer.$canvas = $canvas;
+    renderer.$link = $link;
     renderer.ctx = $canvas.getContext('2d');
+
+    model.addListener(function () {
+        $link.setAttribute('download', model.agent.toLowerCase().replace(/[\s]+/, '-') + '.png');
+    });
 
     model.callListeners();
 });
@@ -235,6 +241,8 @@ var Renderer = (function () {
             ctx.fillStyle = '#595959';
             ctx.fillText(model.country, 350, 489);
             ctx.closePath();
+
+            this.$link.href = this.$canvas.toDataURL('image/png');
         }
     }, {
         key: '$canvas',
@@ -266,6 +274,24 @@ var Renderer = (function () {
          */
         get: function get() {
             return this._ctx;
+        }
+
+        /**
+         *
+         * @param {HTMLAnchorElement} $elem
+         */
+    }, {
+        key: '$link',
+        set: function set($elem) {
+            this._$link = $elem;
+        },
+
+        /**
+         *
+         * @returns {HTMLAnchorElement}
+         */
+        get: function get() {
+            return this._$link;
         }
     }]);
 
