@@ -62,10 +62,10 @@ button, .link-button {
   margin-bottom: 0;
 }
 
-.nickname {
-  color: #00c2ff;
-}
-
 [layout] {
   display: flex;
+}
+
+[layout][wrap] {
+  flex-wrap: wrap;
 }
