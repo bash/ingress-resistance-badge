@@ -1,5 +1,13 @@
 engines:
-  eslint:
-    enabled: true
-  csslint:
-    enabled: true
+    eslint:
+        enabled: true
+    csslint:
+        enabled: true
+
+ratings:
+    paths:
+    - src/**/*
+    - css/**/*
+
+exclude_paths:
+- js/**/*
