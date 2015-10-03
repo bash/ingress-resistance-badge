@@ -4,5 +4,5 @@ indent_style = space
 [*.{html,js}]
 indent_size = 4
 
-[*.css]
+[*.{css,yml}]
 indent_size = 2
