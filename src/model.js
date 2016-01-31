@@ -31,9 +31,7 @@ export class Model {
     }
 
     callListeners() {
-        this._listeners.forEach(function (fn) {
-            fn(this);
-        }, this);
+        this._listeners.forEach(fn => fn(this));
     }
 
     /**

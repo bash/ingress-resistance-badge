@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "semi": [2, "always"],
+    "quotes": [1, "single"],
+    "comma-dangle": [2, "never"],
+    "valid-jsdoc": [2, {
+      "requireParamDescription": false,
+      "requireReturn": false
+    }],
+    "valid-typeof": [2, "always"]
+  }
+}
