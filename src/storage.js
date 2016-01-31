@@ -8,7 +8,7 @@ export class Storage {
      * @param {Model} model
      */
     persist(model) {
-        window.location.hash = btoa([model.agent, model.level, model.country].join('.'));
+        window.history.replaceState(null, '', '#' + btoa([model.agent, model.level, model.country].join('.')));
     }
 
     /**

@@ -330,7 +330,7 @@ var Storage = (function () {
          * @param {Model} model
          */
         value: function persist(model) {
-            window.location.hash = btoa([model.agent, model.level, model.country].join('.'));
+            window.history.replaceState(null, '', '#' + btoa([model.agent, model.level, model.country].join('.')));
         }
 
         /**
